@@ -5,14 +5,11 @@ package oo
  */
 class Book(val title:String, val author: String, val publicationYear : Int, var price: Double) {
 
-    override fun toString(): String {
-        return "Book[title=$title, author=$author, publicationYear=$publicationYear, price=$price]"
-    }
+    override fun toString(): String =
+            "Book[title=$title, author=$author, publicationYear=$publicationYear, price=$price]"
 }
 
-data class DataBook(val title:String, val author: String, val publicationYear : Int, var price: Double) {
-
-}
+data class DataBook(val title:String, val author: String, val publicationYear : Int, var price: Double)
 
 fun main(args: Array<String>) {
 
@@ -36,6 +33,6 @@ fun main(args: Array<String>) {
     println(dataBook)
     println(dataBook3)
 
-    println(book.equals(book2))
-    println(dataBook.equals(dataBook2))
+    println(book == book2)
+    println(dataBook == dataBook2)
 }
